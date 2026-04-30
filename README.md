@@ -10,7 +10,7 @@ Random Forest classification on real clinical isolate data.**
 This project applies machine learning to predict antibiotic resistance 
 phenotypes across all six ESKAPE pathogens — the leading cause of 
 hospital-acquired infections globally. Using 17,904 phenotypic AMR 
-records sourced directly from the PATRIC database (NIH), a Random Forest, the
+records sourced directly from the PATRIC database (NIH), a Random Forest
 classifier was trained to distinguish Resistant from Susceptible isolates 
 based on species identity, antibiotic, and drug class features.
 
