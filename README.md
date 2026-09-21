@@ -7,12 +7,8 @@ Random Forest classification on real clinical isolate data.**
 
 ## Overview
 
-This project applies machine learning to predict antibiotic resistance 
-phenotypes across all six ESKAPE pathogens — the leading cause of 
-hospital-acquired infections globally. Using 17,904 phenotypic AMR 
-records sourced directly from the PATRIC database (NIH), a Random Forest
-classifier was trained to distinguish Resistant from Susceptible isolates 
-based on species identity, antibiotic, and drug class features.
+This project uses machine learning to predict antibiotic resistance phenotypes across all six ESKAPE pathogens, which are major contributors to hospital-acquired infections worldwide. Using 17,904 phenotypic AMR records obtained directly from the PATRIC database (NIH), a Random Forest classifier was trained to distinguish resistant from susceptible isolates based on species identity, antibiotic, and drug class.
+
 
 ## Key Results
 
@@ -29,7 +25,7 @@ based on species identity, antibiotic, and drug class features.
 
 ### Finding 1: The Genomic Feature Gap
 A Random Forest classifier trained exclusively on phenotypic features 
-achieved a mean cross-validated ROC-AUC of 0.724 — meaningful but bounded.
+achieved a mean cross-validated ROC-AUC of 0.724
 
 This ceiling is biologically expected. AMR is mechanistically driven by 
 genomic events: acquisition of resistance genes (e.g. bla_KPC, mcr-1, vanA), 
@@ -52,9 +48,9 @@ are essential for high-accuracy AMR prediction
 
 ### Finding 3: Feature Importance
 The two most important features were `combo_resist_rate` and `abx_resist_rate` 
-— population-level resistance rates derived from the dataset itself. The model 
+which are population-level resistance rates derived from the dataset itself. The model 
 is essentially learning *how resistant is this species to this drug class on 
-average across clinical isolates* — epidemiological knowledge, not mechanistic 
+average across clinical isolates* on the basis of epidemiological knowledge, not mechanistic 
 prediction.
 
 This distinction is critical: the model captures resistance epidemiology well, 
@@ -64,7 +60,7 @@ and Kleborate are designed to address.
 
 ### Wet Lab Correlation
 In our own laboratory work, we observed differential inhibition of ESKAPE 
-pathogens by candidate biomolecules — consistent with this model's finding 
+pathogens by candidate biomolecules consistent with this model's finding 
 that resistance profiles vary substantially across the ESKAPE group. Pathogens 
 with more variable resistance profiles (P. aeruginosa, K. pneumoniae) also 
 tend to be harder to inhibit with novel compounds, reinforcing the clinical 
